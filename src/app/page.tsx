@@ -1,4 +1,13 @@
 import Image from "next/image";
+import AlbumGrid from "../components/AlbumGrid";
+
+
+const album = Array.from({ length: 12 }, (_, i) => {
+  return {
+    src: `album/img${i+1}.jpeg`, // ✅ 상대경로(앞에 / 없음) = GitHub Pages에 안전
+    alt: `album-${i+1}`,
+  };
+});
 
 export default function Page() {
   return (
@@ -34,6 +43,17 @@ export default function Page() {
           저희의 새로운 시작을 함께하고 싶습니다.
         </p>
       </section>
+
+      {/* Album */}
+      <section className="mx-auto max-w-md px-6 py-10">
+        <h2 className="text-lg font-semibold">앨범</h2>
+        <p className="mt-2 text-sm text-gray-600">사진을 눌러 크게 볼 수 있어요.</p>
+
+        <AlbumGrid images={album} />
+      
+      </section>
+
+        
     </main>
   );
 }

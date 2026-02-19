@@ -1,0 +1,10 @@
+{
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#ffbb0050",
+        "editor.findMatchHighlightBackground": "#ff0000",
+        "minimap.findMatchHighlight": "#ff0000",
+        "selection.background": "#00ff2a",
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    }
+}
