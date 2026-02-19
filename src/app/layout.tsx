@@ -18,7 +18,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ilkwon & Yihyun Wedding Invitation",
     description: "2026. 05. 02 SAT",
-    images: ["/a_wedding_invite/banner.jpeg"],
+    images: [
+      {
+        url: "https://ilkwonhong.github.io/a_wedding_invite/banner.jpeg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
   },
 };
 
