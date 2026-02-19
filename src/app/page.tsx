@@ -1,14 +1,12 @@
 import Image from "next/image";
 
-const BASE_PATH = process.env.NODE_ENV === "production" ? "/a_wedding_invite" : "";
-
 export default function Page() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative h-[80vh] w-full overflow-hidden">
         <Image
-          src={`${BASE_PATH}/banner.jpeg`}    
+          src="/banner.jpeg"    
           alt="Wedding photo"
           fill
           priority
