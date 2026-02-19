@@ -6,7 +6,7 @@ export default function Page() {
       {/* Hero */}
       <section className="relative h-[80vh] w-full overflow-hidden">
         <Image
-          src="/banner.jpeg"    
+          src="banner.jpeg"    
           alt="Wedding photo"
           fill
           priority
