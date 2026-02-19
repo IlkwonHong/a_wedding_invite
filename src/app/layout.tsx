@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ilkwon&yihyun",
-  description: "wedding invitation",
+  title: "Ilkwon & Yihyun Wedding Invitation",
+  description: "2026. 05. 02 SAT",
+  openGraph: {
+    title: "Ilkwon & Yihyun Wedding Invitation",
+    description: "2026. 05. 02 SAT",
+    images: ["/a_wedding_invite/banner.jpeg"],
+  },
 };
 
 export default function RootLayout({
