@@ -3,8 +3,22 @@
 import { useState } from "react";
 
 const SIDES = [
-  { label: "신랑측", bank: "은행", number: "123-123-123", holder: "김김김" },
-  { label: "신부측", bank: "은행", number: "123-123-123", holder: "김김김" },
+  {
+    label: "신랑측",
+    accounts: [
+      { bank: "은행", number: "123-123-123", holder: "김김김" },
+      { bank: "은행", number: "123-123-123", holder: "김김김" },
+      { bank: "은행", number: "123-123-123", holder: "김김김" },
+    ],
+  },
+  {
+    label: "신부측",
+    accounts: [
+      { bank: "은행", number: "123-123-123", holder: "김김김" },
+      { bank: "은행", number: "123-123-123", holder: "김김김" },
+      { bank: "은행", number: "123-123-123", holder: "김김김" },
+    ],
+  },
 ];
 
 function AccountRow({
@@ -26,13 +40,12 @@ function AccountRow({
 
   return (
     <div className="flex items-center justify-between rounded-xl bg-white px-4 py-3">
-      <p className="text-sm text-gray-700">
-        <span className="text-gray-400">{bank}</span>
-        <span className="mx-2 text-gray-200">|</span>
-        <span>{number}</span>
-        <span className="mx-2 text-gray-200">|</span>
-        <span className="text-gray-500">{holder}</span>
-      </p>
+      <div className="text-left">
+        <p className="text-sm font-medium text-gray-800">{holder}</p>
+        <p className="mt-0.5 text-xs text-gray-400">
+          {bank} {number}
+        </p>
+      </div>
       <button
         onClick={copy}
         className="ml-3 shrink-0 rounded-lg bg-gray-100 px-3 py-1 text-xs text-gray-500"
@@ -45,9 +58,7 @@ function AccountRow({
 
 function DropdownSection({
   label,
-  bank,
-  number,
-  holder,
+  accounts,
 }: (typeof SIDES)[0]) {
   const [open, setOpen] = useState(false);
 
@@ -72,8 +83,10 @@ function DropdownSection({
       </button>
 
       {open && (
-        <div className="px-3 pb-3">
-          <AccountRow bank={bank} number={number} holder={holder} />
+        <div className="flex flex-col gap-2 px-3 pb-3">
+          {accounts.map((acc, i) => (
+            <AccountRow key={i} {...acc} />
+          ))}
         </div>
       )}
     </div>
