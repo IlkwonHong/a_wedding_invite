@@ -1,3 +1,6 @@
+# Run server in local
+npm run build && node serve-pages.mjs
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
