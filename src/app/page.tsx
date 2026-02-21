@@ -2,6 +2,7 @@ import Image from "next/image";
 import AlbumGrid from "../components/AlbumGrid";
 import WeddingCalendar from "../components/WeddingCalendar";
 import VenueMap from "../components/VenueMap";
+import BankAccount from "../components/BankAccount";
 
 
 const album = Array.from({ length: 12 }, (_, i) => {
@@ -37,7 +38,7 @@ export default function Page() {
       </section>
 
       {/* 아래 컨텐츠 자리 */}
-      <section className="mx-auto max-w-md px-6 py-10">
+      <section className="mx-auto max-w-md px-6 py-10 text-center">
         <h2 className="text-lg font-semibold">초대합니다</h2>
         <p className="mt-3 text-sm leading-6 text-gray-600">
           소중한 분들을 모시고
@@ -47,7 +48,7 @@ export default function Page() {
       </section>
 
       {/* Album */}
-      <section className="mx-auto max-w-md px-6 py-10">
+      <section className="mx-auto max-w-md px-6 py-10 text-center">
         <h2 className="text-lg font-semibold">앨범</h2>
         <p className="mt-2 text-sm text-gray-600">사진을 눌러 크게 볼 수 있어요.</p>
 
@@ -56,15 +57,22 @@ export default function Page() {
       </section>
 
       {/* Calendar */}
-      <section className="mx-auto max-w-md px-6 py-10">
+      <section className="mx-auto max-w-md px-6 py-10 text-center">
         <h2 className="text-lg font-semibold">날짜</h2>
         <WeddingCalendar />
       </section>
 
       {/* Venue */}
-      <section className="mx-auto max-w-md px-6 py-10">
+      <section className="mx-auto max-w-md px-6 py-10 text-center">
         <h2 className="text-lg font-semibold">오시는 길</h2>
         <VenueMap />
+      </section>
+
+      {/* Bank account */}
+      <section className="mx-auto max-w-md px-6 py-10 text-center">
+        <h2 className="text-lg font-semibold">마음 전하기</h2>
+        <p className="mt-2 text-sm text-gray-500">축하의 마음을 전해주시면 감사히 받겠습니다.</p>
+        <BankAccount />
       </section>
 
         
