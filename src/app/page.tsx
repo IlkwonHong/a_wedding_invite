@@ -16,7 +16,7 @@ export default function Page() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative h-[80vh] w-full overflow-hidden">
+      <section className="relative h-[80svh] w-full overflow-hidden">
         <Image
           src="banner.jpeg"    
           alt="Wedding photo"
