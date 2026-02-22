@@ -3,22 +3,24 @@ import AlbumGrid from "../components/AlbumGrid";
 import WeddingCalendar from "../components/WeddingCalendar";
 import VenueMap from "../components/VenueMap";
 import BankAccount from "../components/BankAccount";
+// import EnvelopeIntro from "../components/EnvelopeIntro";
 
 
 const album = Array.from({ length: 12 }, (_, i) => {
   return {
-    src: `album/img${i+1}.jpeg`, // ✅ 상대경로(앞에 / 없음) = GitHub Pages에 안전
+    src: `album/wedding${i+1}.jpg`, // ✅ 상대경로(앞에 / 없음) = GitHub Pages에 안전
     alt: `album-${i+1}`,
   };
 });
 
 export default function Page() {
   return (
+    // <EnvelopeIntro>
     <main className="min-h-screen bg-white">
       {/* Hero */}
       <section className="relative h-[80svh] w-full overflow-hidden">
         <Image
-          src="banner.jpeg"    
+          src="album/wedding10.jpg"    
           alt="Wedding photo"
           fill
           priority
@@ -77,5 +79,6 @@ export default function Page() {
 
         
     </main>
+    // </EnvelopeIntro>
   );
 }
